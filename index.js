@@ -45,8 +45,8 @@ function onClickImage(event) {
 function onClickClose(event) {
   if (event.target !== refs.lightboxImage) {
     refs.lightboxContainer.classList.remove('is-open');
-    refs.lightboxImage.removeAttribute("src");
-    refs.lightboxImage.removeAttribute("alt");
+    refs.lightboxImage.src = "";
+    refs.lightboxImage.alt = "";
     refs.closeButton.removeEventListener('click', onClickClose);
     window.removeEventListener("keydown", onPressKey);
   }
